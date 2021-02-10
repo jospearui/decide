@@ -165,7 +165,7 @@ KEYBITS = 256
 ALLOWED_VERSIONS = ['v1', 'v2']
 DEFAULT_VERSION = 'v1'
 
-BASEURL='https://pruebamanumanuel32.herokuapp.com'
+BASEURL="https://pruebamanumanuel32.herokuapp.com"
 
 try:
     from local_settings import *
