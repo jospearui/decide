@@ -20,3 +20,8 @@ script:
   - coverage run --branch --source=. ./manage.py test mixnet --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
+deploy:
+  provider: heroku
+  app: pruebamanumanuel32
+  strategy: git
+  api_key: $HEROKU_AUTH_TOKEN
