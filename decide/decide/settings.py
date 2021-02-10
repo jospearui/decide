@@ -165,6 +165,8 @@ KEYBITS = 256
 ALLOWED_VERSIONS = ['v1', 'v2']
 DEFAULT_VERSION = 'v1'
 
+BASEURL="https://pruebamanumanuel32.herokuapp.com"
+
 try:
     from local_settings import *
 except ImportError:
@@ -179,4 +181,7 @@ if os.path.exists("config.jsonnet"):
         vars()[k] = v
 
 
-INSTALLED_APPS = INSTALLED_APPS + MODULES
+INSTALLED_APPS = INSTALLED_APPS + MODULE
+
+import django_heroku
+django_heroku.settings(locals())
